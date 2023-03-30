@@ -1,0 +1,35 @@
+.socmed-container {
+    border-radius: 50%;
+    background-color: #0D28A6;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 32px;
+}
+
+.fi {
+    color: white;
+    width: 20px;
+    height: 20px;
+}
+
+.bcr-logo {
+    width: 100px;
+    height: 34px;
+    background: #0D28A6;
+}
+
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}

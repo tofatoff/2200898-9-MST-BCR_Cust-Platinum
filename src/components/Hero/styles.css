@@ -1,0 +1,15 @@
+#hero {
+    background: #F1F3FF;
+    padding-top: 38px;
+}
+
+.heroImg {
+    height: 407px;
+    width: 704px;
+}
+
+.hero-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
