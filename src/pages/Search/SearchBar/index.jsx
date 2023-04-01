@@ -30,7 +30,7 @@ const SearchBar = () => {
         console.log(category)
         console.log(price)
         console.log(isRented)
-        const getPrice = {}
+        let getPrice = {}
         if (Object.keys(price).length !== 0) {
             getPrice = PRICE_OPTION[price];
             console.log(getPrice)

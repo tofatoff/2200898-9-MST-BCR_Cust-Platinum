@@ -3,35 +3,75 @@ import {
   Card, CardBody, CardTitle, CardSubtitle, CardText, Button,
 } from 'reactstrap'
 
-const CardSearchResult = () => {
+const CardSearchResult = (props) => {
+  const strToCurrIDR = (strnum) => {
+    const formatterIDR = new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    });
+    return formatterIDR.format(parseInt(strnum));//ga pake parseInt jg bisa
+  }
+
   return (
     <Card
       style={{
-        width: '18rem'
+        width: '333px',
+        height: '478px',
+        padding: '24px',
+        marginRight: '24px'
       }}
     >
       <img
-        alt="Sample"
-        src="https://picsum.photos/300/200"
+        alt={props.name}
+        src={props.img}
+        height='222px'
+        style={{
+          objectFit: 'cover',
+        }}
       />
-      <CardBody>
+      <CardBody
+        style={{
+          padding: 0,
+          fontFamily: 'Arial',
+          fontStyle: 'normal',
+        }}
+      >
         <CardSubtitle
-          className="mb-2 text-muted"
+          className="mb-2 mt-2 text-muted"
           tag="h6"
+          style={{
+            fontWeight: '400',
+            fontSize: '14px',
+            lineHeight: '20px',
+          }}
         >
-          Card subtitle
+          {props.name}
         </CardSubtitle>
-        <CardTitle tag="h5">
-          Card title
+        <CardTitle tag="h5"
+          style={{
+            fontWeight: '700',
+            fontSize: '16px',
+            lineHeight: '24px',
+          }}
+        >
+          {strToCurrIDR(props.price)} / hari
         </CardTitle>
-        <CardText>
-          Some quick example text to build on the card title and make up the bulk of the card‘s content.
+        <CardText
+          style={{
+            fontWeight: '700',
+            fontSize: '14px',
+            lineHeight: '20px',
+          }}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </CardText>
-        <Button>
-          Button
+        <Button style={{ background: '#5CB85F', width: '100%' }}>
+          Pilih Mobil
         </Button>
       </CardBody>
-    </Card>
+    </Card >
   )
 }
 
