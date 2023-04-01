@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+    Collapse,
     Offcanvas,
     OffcanvasHeader,
     OffcanvasBody,
@@ -20,8 +21,8 @@ const HeaderNav = (args) => {
     const toggle = () => setIsOpen(!isOpen);
 
     return (
-        <div style={{
-            background: '#F1F3FF'
+        <div height={args.height} style={{
+            background: '#F1F3FF',
         }}>
 
 
@@ -29,7 +30,31 @@ const HeaderNav = (args) => {
                 <Navbar expand='xl' style={{ backgroundColor: 'transparent' }} color="transparent">
                     <NavbarBrand href="/"><LogoBCR /></NavbarBrand>
                     <NavbarToggler onClick={toggle} />
-                    <Offcanvas isOpen={isOpen} navbar toggle={toggle} direction="end">
+                    <Collapse navbar>
+                        <Nav className="ms-auto" navbar>
+                            <NavItem style={{
+                                marginRight: '32px'
+                            }}>
+                                <NavLink href="/#our-services">Our Services</NavLink>
+                            </NavItem>
+                            <NavItem style={{
+                                marginRight: '32px'
+                            }}>
+                                <NavLink href="/#why-us">Why Us</NavLink>
+                            </NavItem>
+                            <NavItem style={{
+                                marginRight: '32px'
+                            }}>
+                                <NavLink href="/#testimonial">Testimonial</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/#faq">
+                                    FAQ
+                                </NavLink>
+                            </NavItem>
+                        </Nav>
+                    </Collapse>
+                    <Offcanvas isOpen={isOpen} toggle={toggle} direction="end">
                         <OffcanvasHeader toggle={toggle}>
                             BCR
                         </OffcanvasHeader>
