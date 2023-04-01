@@ -26,15 +26,21 @@ const SearchBar = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const getPrice = PRICE_OPTION[price];
         console.log(name)
         console.log(category)
         console.log(price)
         console.log(isRented)
-        console.log(getPrice)
-        if (!('minPrice' in getPrice)) { getPrice.minPrice = '' }
-        if (!('maxPrice' in getPrice)) { getPrice.maxPrice = '' }
-        console.log(getPrice)
+        const getPrice = {}
+        if (Object.keys(price).length !== 0) {
+            getPrice = PRICE_OPTION[price];
+            console.log(getPrice)
+            if (!('minPrice' in getPrice)) { getPrice.minPrice = '' }
+            if (!('maxPrice' in getPrice)) { getPrice.maxPrice = '' }
+            console.log(getPrice)
+        } else {
+            getPrice.minPrice = ''
+            getPrice.maxPrice = ''
+        }
 
         navigate(`/search-result?name=${name}&category=${category}&minPrice=${getPrice.minPrice}&maxPrice=${getPrice.maxPrice}&isRented=${isRented}`);
     };
