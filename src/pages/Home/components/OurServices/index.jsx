@@ -9,8 +9,10 @@ const OurServices = () => {
             style={{
                 margin: '100px 0px'
             }}>
-            <Container className='d-flex align-items-center'>
-                <img src={imgService} alt="imgService" className='me-5' width="459" height="428px" />
+            <Container className='d-flex align-items-center flex-wrap flex-xxl-nowrap'>
+                <img src={imgService} alt="imgService" className='me-5'
+                // width="100%" height="100%"
+                />
                 <div>
                     <h2
                         style={{
