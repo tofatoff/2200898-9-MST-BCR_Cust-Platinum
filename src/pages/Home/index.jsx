@@ -15,7 +15,7 @@ const Home = () => {
       <Hero showBtnCTA="1" />
       <OurServices />
       <WhyUs />
-      {/* <Testimonial /> */}
+      <Testimonial />
       <CallToAction />
       <FAQ />
       <Footer />
