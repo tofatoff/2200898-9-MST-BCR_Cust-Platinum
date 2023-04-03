@@ -8,7 +8,8 @@ const CardWhyUs = (props) => {
             width: '268px',
             height: '196px',
             border: '1px solid #D0D0D0',
-            borderRadius: '8px'
+            borderRadius: '8px',
+            marginBottom: '16px'
         }}>
             <CardBody className='d-flex flex-column justify-content-between m-0 p-0'>
                 <div style={{

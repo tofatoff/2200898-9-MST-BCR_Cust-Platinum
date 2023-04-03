@@ -8,9 +8,11 @@ const WhyUs = () => {
     return (
         <section id="why-us" className="my-5 py-5">
             <Container>
-                <h2>Why Us?</h2>
-                <p>Mengapa harus pilih Binar Car Rental?</p>
-                <div className="d-flex justify-content-between">
+                <div className="section-title">
+                    <h2>Why Us?</h2>
+                    <p>Mengapa harus pilih Binar Car Rental?</p>
+                </div>
+                <div className="d-flex justify-content-between flex-wrap">
 
                     <CardWhyUs
                         icon={<FiThumbsUp />}

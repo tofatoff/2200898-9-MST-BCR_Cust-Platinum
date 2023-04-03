@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import Home from './pages/Home'
 import UnderMaintenance from './pages/UnderMaintenance';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css'
 
 import {
   createBrowserRouter,
