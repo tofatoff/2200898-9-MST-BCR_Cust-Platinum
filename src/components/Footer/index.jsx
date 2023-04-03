@@ -20,13 +20,32 @@ const Footer = () => {
                 lineHeight: '20px',
             }}
         >
-            <Container className="d-flex justify-content-between">
-                <address>
+            <Container className="d-flex justify-content-between flex-column flex-xxl-row">
+                <address
+                    style={{
+                        marginBottom: '16px',
+                    }}
+                >
                     Jalan Suroyo No. 161 Mayangan Kota <br />Probolonggo 672000 <br />
                     binarcarrental@gmail.com <br />
                     081-233-334-808 <br />
                 </address>
-                <nav>
+                <nav
+                    style={{
+                        margin: '0',
+                        marginBottom: '16px',
+                        padding: '0',
+                        textDecoration: 'none',
+                        listStyleType: 'none',
+                        fontFamily: 'Arial',
+                        fontSize: '14px',
+                        fontWeight: '400',
+                        lineHeight: '20px',
+                        letterSpacing: '0em',
+                        textAlign: 'left',
+                        borderBottom: 'none',
+                    }}
+                >
                     <ul>
                         <li>
                             <a href="#our-services">
@@ -50,7 +69,11 @@ const Footer = () => {
                         </li>
                     </ul>
                 </nav>
-                <div>
+                <div
+                    style={{
+                        marginBottom: '16px',
+                    }}
+                >
                     <p>Connect with us</p>
                     <ul className="d-flex m-0 p-0">
                         <li className="socmed-container">
@@ -80,7 +103,11 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div
+                    style={{
+                        marginBottom: '16px',
+                    }}
+                >
                     <p>Copyright Binar 2022</p>
                     <LogoBCR />
                 </div>
