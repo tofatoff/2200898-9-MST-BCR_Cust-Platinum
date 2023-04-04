@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     element: <SearchResult />,
   },
   {
-    path: "/detail",
+    path: "/detail/:carId",
     element: <Detail />,
   },
   {

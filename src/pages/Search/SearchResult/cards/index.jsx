@@ -2,6 +2,7 @@ import React from 'react'
 import {
   Card, CardBody, CardTitle, CardSubtitle, CardText, Button,
 } from 'reactstrap'
+import { Link } from 'react-router-dom'
 
 const CardSearchResult = (props) => {
   const strToCurrIDR = (strnum) => {
@@ -68,7 +69,9 @@ const CardSearchResult = (props) => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </CardText>
         <Button style={{ background: '#5CB85F', width: '100%' }}>
-          Pilih Mobil
+          <Link to={`/detail/${props.id}`}>
+            Pilih Mobil
+          </Link>
         </Button>
       </CardBody>
     </Card >

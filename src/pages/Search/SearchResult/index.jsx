@@ -33,6 +33,7 @@ const SearchResult = () => {
             name={car.name}
             img={car.image}
             price={car.price}
+            id={car.id}
         />
     }
 
