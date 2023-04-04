@@ -45,8 +45,13 @@ const SearchResult = () => {
     return (
         <>
             <HeaderNav />
+            <div
+                style={{ backgroundColor: "rgb(241, 243, 255)", height: 100 }}
+            >
+
+            </div>
             <SearchBar />
-            <Container className='d-flex '>
+            <Container className='d-flex flex-wrap justify-content-center'>
                 {resultData.map((car) => (
                     generateCard(car)
                 ))}
