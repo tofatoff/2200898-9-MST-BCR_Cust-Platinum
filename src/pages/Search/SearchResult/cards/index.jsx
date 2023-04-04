@@ -68,10 +68,8 @@ const CardSearchResult = (props) => {
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </CardText>
-        <Button style={{ background: '#5CB85F', width: '100%' }}>
-          <Link to={`/detail/${props.id}`}>
-            Pilih Mobil
-          </Link>
+        <Button style={{ background: '#5CB85F', width: '100%' }} href={`/detail/${props.id}`} tag='a'>
+          Pilih Mobil
         </Button>
       </CardBody>
     </Card >
