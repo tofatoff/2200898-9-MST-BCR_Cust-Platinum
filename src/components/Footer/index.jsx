@@ -20,7 +20,7 @@ const Footer = () => {
                 lineHeight: '20px',
             }}
         >
-            <Container className="d-flex justify-content-between flex-column flex-xxl-row">
+            <Container className="d-flex justify-content-between flex-column flex-lg-row">
                 <address
                     style={{
                         marginBottom: '16px',

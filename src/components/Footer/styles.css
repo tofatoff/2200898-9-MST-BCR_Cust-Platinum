@@ -24,12 +24,19 @@
     background: #0D28A6;
 }
 
-ul {
+footer ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-a {
+footer a {
     text-decoration: none;
+    color: black;
+
+}
+
+footer li {
+    margin-bottom: 16px;
+
 }
