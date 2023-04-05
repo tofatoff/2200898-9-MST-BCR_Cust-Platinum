@@ -34,18 +34,23 @@ const Detail = () => {
             ></div>
             <SearchBar disableAllInput={true} />
             <div className="container d-flex justify-content-around">
-                <TentangPaket />
-                <DetailMobil
-                    name={car.name}
-                    category={car.category}
-                    price={car.price}
-                    image={car.image}
+                {car.name != `Not Found` ?
+                    <>
+                        <TentangPaket />
+                        <DetailMobil
+                            name={car.name}
+                            category={car.category}
+                            price={car.price}
+                            image={car.image}
 
-                />
+                        />
+                    </>
+                    : <h1>Car is not found</h1>}
             </div>
             <Footer />
         </ >
     )
+
 }
 
 export default Detail
