@@ -51,7 +51,7 @@ const SearchResult = () => {
             >
 
             </div>
-            <SearchBar />
+            <SearchBar editButton={true} />
             <Container className='d-flex flex-wrap justify-content-center'>
                 {resultData.map((car) => (
                     generateCard(car)

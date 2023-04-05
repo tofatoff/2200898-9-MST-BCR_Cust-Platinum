@@ -161,15 +161,24 @@ const SearchBar = (props) => {
                                 </FormGroup>
                             </Col>
                             <Col className="d-flex align-items-center justify-content-center">
-                                <Button
-                                    type="submit"
-                                    hidden={props.disableAllInput}
-                                    style={{
-                                        background: '#5CB85F'
-                                    }}>
-                                    Cari Mobil
-                                </Button>
-
+                                {props.editButton ? (
+                                    <Button
+                                        type="submit"
+                                        hidden={props.disableAllInput}
+                                        color="primary"
+                                        outline>
+                                        Edit
+                                    </Button>
+                                ) : (
+                                    <Button
+                                        type="submit"
+                                        hidden={props.disableAllInput}
+                                        style={{
+                                            background: '#5CB85F'
+                                        }}>
+                                        Cari Mobil
+                                    </Button>
+                                )}
                             </Col>
                         </Row>
                     </Form>
