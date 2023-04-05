@@ -16,7 +16,7 @@ const PRICE_OPTION = {
     },
 };
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     const [name, setName] = useState("");
     const [category, setCategory] = useState("");
     const [price, setPrice] = useState({});
@@ -44,6 +44,15 @@ const SearchBar = () => {
 
         navigate(`/search-result?name=${name}&category=${category}&minPrice=${getPrice.minPrice}&maxPrice=${getPrice.maxPrice}&isRented=${isRented}`);
     };
+
+    function disableFormInputs() {
+        const form = document.querySelector('form');
+        const inputs = form.querySelectorAll('input, select');
+        inputs.forEach(input => {
+            input.disabled = true;
+        });
+    }
+
 
     return (
         <section id='search'>
@@ -76,6 +85,7 @@ const SearchBar = () => {
                                         onChange={(e) => {
                                             setName(e.target.value);
                                         }}
+                                        disabled={props.disableAllInput}
                                     />
                                 </FormGroup>
                             </Col>
@@ -85,6 +95,7 @@ const SearchBar = () => {
                                         Kategori
                                     </Label>
                                     <Input
+                                        disabled={props.disableAllInput}
                                         id="kategoriMobil"
                                         type="select"
                                         value={category}
@@ -113,6 +124,7 @@ const SearchBar = () => {
                                         onChange={(e) => {
                                             setPrice(e.target.value);
                                         }}
+                                        disabled={props.disableAllInput}
                                     >
                                         <option value="" hidden>
                                             Masukkan Harga Sewa per Hari
@@ -141,6 +153,7 @@ const SearchBar = () => {
                                         onChange={(e) => {
                                             setIsRented(e.target.value);
                                         }}
+                                        disabled={props.disableAllInput}
                                     >
                                         <option value={true}>Disewakan</option>
                                         <option value={false}>Tidak Disewakan</option>
@@ -150,6 +163,7 @@ const SearchBar = () => {
                             <Col className="d-flex align-items-center justify-content-center">
                                 <Button
                                     type="submit"
+                                    hidden={props.disableAllInput}
                                     style={{
                                         background: '#5CB85F'
                                     }}>

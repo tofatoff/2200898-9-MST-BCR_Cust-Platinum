@@ -32,7 +32,7 @@ const Detail = () => {
             <div
                 style={{ backgroundColor: "rgb(241, 243, 255)", height: 100 }}
             ></div>
-            <SearchBar />
+            <SearchBar disableAllInput={true} />
             <div className="container d-flex justify-content-around">
                 <TentangPaket />
                 <DetailMobil
