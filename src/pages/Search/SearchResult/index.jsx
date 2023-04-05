@@ -53,9 +53,13 @@ const SearchResult = () => {
             </div>
             <SearchBar editButton={true} />
             <Container className='d-flex flex-wrap justify-content-center'>
-                {resultData.map((car) => (
-                    generateCard(car)
-                ))}
+                {resultData.length > 0 ?
+                    resultData.map((car) => (
+                        generateCard(car)
+                    ))
+                    :
+                    `No car available. Change the filter and refresh the page`
+                }
 
             </Container>
             <Footer />
