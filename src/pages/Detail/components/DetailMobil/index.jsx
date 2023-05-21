@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState, forwardRef } from "react";
 import { FiUsers } from "react-icons/fi";
-import { Button } from "reactstrap";
+import { Button, Input, InputGroup, InputGroupText } from "reactstrap";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const CATEGORY_OPTION = {
   small: "2 - 4 orang",
@@ -9,6 +11,35 @@ const CATEGORY_OPTION = {
 };
 
 const DetailMobil = (props) => {
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+  const onChange = (dates) => {
+    const [start, end] = dates;
+    setStartDate(start);
+    setEndDate(end);
+  };
+
+  const DatePickerInput = forwardRef(({ value, onClick, placeholder }, ref) => (
+    <InputGroup>
+      <Input
+        placeholder={placeholder}
+        value={value}
+        onClick={onClick}
+        ref={ref}
+        style={{
+          borderRight: 0,
+        }}
+      />
+      <InputGroupText
+        style={{
+          backgroundColor: "transparent",
+        }}
+      >
+        <i class="fa-regular fa-calendar"></i>
+      </InputGroupText>
+    </InputGroup>
+  ));
+
   const strToCurrIDR = (strnum) => {
     const formatterIDR = new Intl.NumberFormat("id-ID", {
       style: "currency",
@@ -55,6 +86,15 @@ const DetailMobil = (props) => {
         </span>
       </div>
       <p>Tentukan lama sewa mobil (max. 7 hari)</p>
+      <DatePicker
+        placeholderText="Pilih tanggal mulai dan tanggal akhir sewa"
+        selected={startDate}
+        onChange={onChange}
+        startDate={startDate}
+        endDate={endDate}
+        selectsRange
+        customInput={<DatePickerInput />}
+      />
       <div className="d-flex justify-content-between align-items-center">
         <span
           style={{
