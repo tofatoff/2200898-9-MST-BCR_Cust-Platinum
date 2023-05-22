@@ -13,6 +13,8 @@ import { Container } from 'reactstrap';
 import Search from './pages/Search';
 import Detail from './pages/Detail';
 import SearchResult from './pages/Search/SearchResult';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
   {
     path: "/detail/:carId",
     element: <Detail />,
+  },
+  {
+    path: "/login",
+    element: <Login/>,
+  },
+  {
+    path: "/register",
+    element: <Register />,
   },
   {
     path: "/*",
