@@ -58,7 +58,7 @@ const Login = () => {
                         <Form onSubmit={handleSubmit}>
 
                             {error && <><small style={{ color: 'red' }}>{error}</small><br /></>}<br />
-
+                            <h1>Welcome Back</h1>
                             <div className="form-outline mb-4">
                                 <label className="form-label">Email address</label>
                                 <input type="email" id="form2Example1" className="form-control" name="email" onChange={e => setEmail(e.target.value)} />

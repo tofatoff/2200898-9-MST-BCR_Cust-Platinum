@@ -1,20 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Home from './pages/Home'
-import UnderMaintenance from './pages/UnderMaintenance';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Home from "./pages/Home";
+import UnderMaintenance from "./pages/UnderMaintenance";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Container } from 'reactstrap';
 import Search from './pages/Search';
 import Detail from './pages/Detail';
 import SearchResult from './pages/Search/SearchResult';
-import Login from './pages/Login';
-import Register from './pages/Register';
+import Login from "./pages/Login";
+import Register from "./pages/Register"
+
+
 
 const router = createBrowserRouter([
   {
@@ -47,6 +46,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
-)
+);
