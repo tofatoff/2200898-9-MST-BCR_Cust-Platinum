@@ -18,7 +18,11 @@ import LogoBCR from '../LogoBCR';
 const HeaderNav = (args) => {
     const [isOpen, setIsOpen] = useState(false);
 
+    const [isLogin, setIsLogin] = useState(false);
+
     const toggle = () => setIsOpen(!isOpen);
+
+    
 
     return (
         <div height={args.height} style={{
@@ -52,6 +56,12 @@ const HeaderNav = (args) => {
                                     FAQ
                                 </NavLink>
                             </NavItem>
+
+                            <NavLink href="/register">
+                                <button className='btn btn-success'>Register</button>
+                            </NavLink>
+                            
+                            
                         </Nav>
                     </Collapse>
                     <Offcanvas isOpen={isOpen} toggle={toggle} direction="end">

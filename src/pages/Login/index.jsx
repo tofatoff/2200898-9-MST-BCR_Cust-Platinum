@@ -3,6 +3,7 @@ import imgLogin from "../../assets/img_login.png"
 import LogoBCR from "../../components/LogoBCR"
 import { useState } from "react"
 import { setUserSession } from "../../utils/common"
+import Swal from 'sweetalert2'
 
 async function loginUser(credentials) {
     return fetch('https://bootcamp-rent-cars.herokuapp.com/customer/auth/login', {
@@ -36,7 +37,20 @@ const Login = () => {
                 if (!isSuccessful) {
                     setError(result.message);
                 } else { 
-                    setUserSession(result);
+                    Swal.fire(
+                        'Berhasil',
+                        'Login telah berhasil',
+                        'success'
+                    ).then((result) => {
+                        /* Read more about isConfirmed, isDenied below */
+                        if (result.isConfirmed) {
+                            setUserSession(result);
+                            window.location.replace('/');
+                        } else if (result.isDenied) {
+                            Swal.fire('Login di batalkan', '', 'info')
+                        }
+                    })
+
                     //ini kondisi login success,
                     
                     
@@ -73,7 +87,7 @@ const Login = () => {
                             <button className="btn btn-primary btn-block mb-4" type="submit" disabled={loading} >{loading ? 'Loading...' : 'Login'} </button>
 
                             <div className="text-center">
-                                <p>Don't have an account? <a href="#!">Sign up for free</a></p>
+                                <p>Don't have an account? <a href="/register">Sign up for free</a></p>
                             </div>
                         </Form>
 

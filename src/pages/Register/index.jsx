@@ -3,6 +3,7 @@ import imgLogin from "../../assets/img_login.png"
 import LogoBCR from "../../components/LogoBCR"
 import { useEffect, useState } from "react"
 import { setUserSession } from "../../utils/common"
+import Swal from 'sweetalert2'
 
 const Register = () => {
 
@@ -41,11 +42,19 @@ const Register = () => {
                 if (!isSuccessful) {
                     setError(result.message);
                 } else {
-                    alert("Register telah berhasil");
-                    //ini kondisi login success,
-                    // setUserSession(result);
 
-                    //redirect ke halaman mana jika login sukses
+                    Swal.fire(
+                        'Berhasil',
+                        'Register telah berhasil, silahkan coba login',
+                        'success'
+                    ).then((result) => {
+                        /* Read more about isConfirmed, isDenied below */
+                        if (result.isConfirmed) {
+                            window.location.replace('/login');
+                        } else if (result.isDenied) {
+                            Swal.fire('Silahkan ke halaman login', '', 'info')
+                        }
+                    })
 
                 }
                 setLoading(false)
@@ -85,7 +94,7 @@ const Register = () => {
                             <button className="btn btn-primary btn-block mb-4" type="submit" disabled={loading} >{loading ? 'Loading...' : 'Sign Up'} </button>
 
                             <div className="text-center">
-                                <p>Already have an account<a href="#!">Sign In here</a></p>
+                                <p>Already have an account<a href="/login">Sign In here</a></p>
                             </div>
                         </Form>
 
