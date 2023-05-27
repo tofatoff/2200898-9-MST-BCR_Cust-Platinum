@@ -36,8 +36,9 @@ const Login = () => {
                 if (!isSuccessful) {
                     setError(result.message);
                 } else { 
-                    //ini kondisi login success,
                     setUserSession(result);
+                    //ini kondisi login success,
+                    
                     
                     //redirect ke halaman mana jika login sukses
 
