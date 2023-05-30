@@ -1,42 +1,40 @@
 .socmed-container {
-    border-radius: 50%;
-    background-color: #0D28A6;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    margin-right: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 32px;
-    width: 32px;
+  border-radius: 50%;
+  background-color: #0d28a6;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
 }
 
 .fi {
-    color: white;
-    width: 20px;
-    height: 20px;
+  color: white;
+  width: 20px;
+  height: 20px;
 }
 
 .bcr-logo {
-    width: 100px;
-    height: 34px;
-    background: #0D28A6;
+  width: 100px;
+  height: 34px;
+  background: #0d28a6;
 }
 
 footer ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 footer a {
-    text-decoration: none;
-    color: black;
-
+  text-decoration: none;
+  color: black;
 }
 
 footer li {
-    margin-bottom: 16px;
-
+  margin-bottom: 16px;
 }

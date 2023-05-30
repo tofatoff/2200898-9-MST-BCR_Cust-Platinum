@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "coverage": "vitest --coverage.enabled --coverage.all",
+    "pretty": "prettier --write ."
   },
   "dependencies": {
     "axios": "^1.3.4",
@@ -22,9 +25,16 @@
     "sweetalert2": "^11.7.5"
   },
   "devDependencies": {
+    "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
-    "vite": "^4.2.0"
+    "@vitest/coverage-istanbul": "^0.31.2",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "jsdom": "^22.1.0",
+    "prettier": "2.8.8",
+    "vite": "^4.2.0",
+    "vitest": "^0.31.2"
   }
 }
