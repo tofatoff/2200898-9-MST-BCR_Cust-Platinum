@@ -23,7 +23,10 @@ const PaymentConfirm = () => {
 
   return (
     <Fragment>
-      <section id="confirm-payment">
+      <section
+        id="confirm-payment"
+        className={`container ${classes.cardConfirmPayment}`}
+      >
         <div className="row justify-content-center">
           <div className="col-lg-7 g-4">
             <div className="card countTime">
