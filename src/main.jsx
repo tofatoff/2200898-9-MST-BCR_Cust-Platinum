@@ -15,6 +15,8 @@ import Register from "./pages/Register";
 import Payment from "./pages/Payment";
 import PaymentConfirm from "./pages/PaymentConfirm";
 import PaymentUpload from "./pages/PaymentUpload";
+import { store } from "./store";
+import { Provider } from "react-redux";
 
 const router = createBrowserRouter([
   {
@@ -60,5 +62,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
 );
