@@ -5,8 +5,9 @@ import { useState } from "react"
 import { setUserSession } from "../../utils/common"
 import Swal from 'sweetalert2'
 
+
 async function loginUser(credentials) {
-    return fetch('https://bootcamp-rent-cars.herokuapp.com/customer/auth/login', {
+    return fetch('https://api-car-rental.binaracademy.org/customer/auth/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -42,7 +43,7 @@ const Login = () => {
                         'Login telah berhasil',
                         'success'
                     ).then((result) => {
-                        /* Read more about isConfirmed, isDenied below */
+                       
                         if (result.isConfirmed) {
                             setUserSession(result);
                             window.location.replace('/');
@@ -50,11 +51,6 @@ const Login = () => {
                             Swal.fire('Login di batalkan', '', 'info')
                         }
                     })
-
-                    //ini kondisi login success,
-                    
-                    
-                    //redirect ke halaman mana jika login sukses
 
                 }
                 setLoading(false)
@@ -73,7 +69,9 @@ const Login = () => {
                         <Form onSubmit={handleSubmit}>
 
                             {error && <><small style={{ color: 'red' }}>{error}</small><br /></>}<br />
-                            <h1>Welcome Back</h1>
+                            
+                            <h4>Welcome Back</h4>
+
                             <div className="form-outline mb-4">
                                 <label className="form-label">Email address</label>
                                 <input type="email" id="form2Example1" className="form-control" name="email" onChange={e => setEmail(e.target.value)} />
@@ -84,7 +82,8 @@ const Login = () => {
                                 <input type="password" id="form2Example2" className="form-control" name="password" onChange={e => setPassword(e.target.value)} />
                             </div>
 
-                            <button className="btn btn-primary btn-block mb-4" type="submit" disabled={loading} >{loading ? 'Loading...' : 'Login'} </button>
+                            <div className="text-center pt-1 mb-5 pb-1">
+                                <button className="btn btn-primary btn-block mb-3" type="submit" disabled={loading} >{loading ? 'Loading...' : 'Sign In'} </button> </div>
 
                             <div className="text-center">
                                 <p>Don't have an account? <a href="/register">Sign up for free</a></p>

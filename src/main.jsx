@@ -17,6 +17,8 @@ import PaymentConfirm from "./pages/PaymentConfirm";
 import PaymentUpload from "./pages/PaymentUpload";
 import { store } from "./store";
 import { Provider } from "react-redux";
+import PdfViewer from "./components/Eticket/PdfViewer";
+import Eticket from "./pages/Eticket";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +60,10 @@ const router = createBrowserRouter([
   {
     path: "/*",
     element: <UnderMaintenance />,
+  },
+  {
+    path: "/eticket",
+    element: <Eticket/>,
   },
 ]);
 
