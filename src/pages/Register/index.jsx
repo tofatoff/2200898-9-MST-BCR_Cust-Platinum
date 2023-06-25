@@ -14,7 +14,7 @@ const Register = () => {
     const [loading, setLoading] = useState(false);
 
     async function registerUser(params) {
-        return fetch('https://bootcamp-rent-cars.herokuapp.com/customer/auth/register', {
+        return fetch('https://api-car-rental.binaracademy.org/customer/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -91,7 +91,8 @@ const Register = () => {
                                 <input type="password" id="form2Example2" className="form-control" name="password" onChange={e => setPassword(e.target.value)} />
                             </div>
 
-                            <button className="btn btn-primary btn-block mb-4" type="submit" disabled={loading} >{loading ? 'Loading...' : 'Sign Up'} </button>
+                            <div className="text-center pt-1 mb-5 pb-1"><button className="btn btn-primary btn-block mb-4" type="submit" disabled={loading} >{loading ? 'Loading...' : 'Sign Up'} </button>
+                            </div>
 
                             <div className="text-center">
                                 <p>Already have an account<a href="/login">Sign In here</a></p>

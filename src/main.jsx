@@ -12,6 +12,8 @@ import Detail from './pages/Detail';
 import SearchResult from './pages/Search/SearchResult';
 import Login from "./pages/Login";
 import Register from "./pages/Register"
+import PdfViewer from "./components/Eticket/PdfViewer";
+import Eticket from "./pages/Eticket";
 
 
 
@@ -43,6 +45,10 @@ const router = createBrowserRouter([
   {
     path: "/*",
     element: <UnderMaintenance />,
+  },
+  {
+    path: "/eticket",
+    element: <Eticket/>,
   },
 ]);
 
