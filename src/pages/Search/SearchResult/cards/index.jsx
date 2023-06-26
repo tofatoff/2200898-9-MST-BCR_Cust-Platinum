@@ -1,8 +1,12 @@
-import React from 'react'
+import React from "react";
 import {
-  Card, CardBody, CardTitle, CardSubtitle, CardText, Button,
-} from 'reactstrap'
-import { Link } from 'react-router-dom'
+  Card,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  CardText,
+  Button,
+} from "reactstrap";
 
 const CardSearchResult = (props) => {
   const strToCurrIDR = (strnum) => {
@@ -12,68 +16,73 @@ const CardSearchResult = (props) => {
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     });
-    return formatterIDR.format(parseInt(strnum));//ga pake parseInt jg bisa
-  }
+    return formatterIDR.format(parseInt(strnum)); //ga pake parseInt jg bisa
+  };
 
   return (
     <Card
       style={{
-        width: '333px',
-        height: '478px',
-        padding: '24px',
-        marginRight: '24px'
+        width: "333px",
+        height: "478px",
+        padding: "24px",
+        marginRight: "24px",
       }}
     >
       <img
         alt={props.name}
-        src={props.img}
-        height='222px'
+        src={props.img || "https://fakeimg.pl/600x400?text=No+Image+Available"}
+        height="222px"
         style={{
-          objectFit: 'cover',
+          objectFit: "cover",
         }}
       />
       <CardBody
         style={{
           padding: 0,
-          fontFamily: 'Arial',
-          fontStyle: 'normal',
+          fontStyle: "normal",
         }}
       >
         <CardSubtitle
           className="mb-2 mt-2 text-muted"
           tag="h6"
           style={{
-            fontWeight: '400',
-            fontSize: '14px',
-            lineHeight: '20px',
+            fontWeight: "400",
+            fontSize: "14px",
+            lineHeight: "20px",
           }}
         >
           {props.name}
         </CardSubtitle>
-        <CardTitle tag="h5"
+        <CardTitle
+          tag="h5"
           style={{
-            fontWeight: '700',
-            fontSize: '16px',
-            lineHeight: '24px',
+            fontWeight: "700",
+            fontSize: "16px",
+            lineHeight: "24px",
           }}
         >
           {strToCurrIDR(props.price)} / hari
         </CardTitle>
         <CardText
           style={{
-            fontWeight: '700',
-            fontSize: '14px',
-            lineHeight: '20px',
+            fontWeight: "700",
+            fontSize: "14px",
+            lineHeight: "20px",
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </CardText>
-        <Button style={{ background: '#5CB85F', width: '100%' }} href={`/detail/${props.id}`} tag='a'>
+        <Button
+          style={{ background: "#5CB85F", width: "100%" }}
+          href={`/detail/${props.id}`}
+          tag="a"
+        >
           Pilih Mobil
         </Button>
       </CardBody>
-    </Card >
-  )
-}
+    </Card>
+  );
+};
 
-export default CardSearchResult
+export default CardSearchResult;
