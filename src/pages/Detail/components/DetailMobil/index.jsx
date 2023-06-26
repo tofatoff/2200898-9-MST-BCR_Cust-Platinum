@@ -3,6 +3,8 @@ import { FiUsers } from "react-icons/fi";
 import { Button, Input, InputGroup, InputGroupText } from "reactstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useSelector, useDispatch } from "react-redux";
+import { setEndDate, setStartDate } from "../../../../redux/carSlice";
 
 const CATEGORY_OPTION = {
   small: "2 - 4 orang",
@@ -11,12 +13,15 @@ const CATEGORY_OPTION = {
 };
 
 const DetailMobil = (props) => {
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
+  // const [startDate, setStartDate] = useState(null);
+  // const [endDate, setEndDate] = useState(null);
+  const startDate = useSelector((state) => state.car.startDate);
+  const endDate = useSelector((state) => state.car.endDate);
+  const dispatch = useDispatch();
   const onChange = (dates) => {
     const [start, end] = dates;
-    setStartDate(start);
-    setEndDate(end);
+    dispatch(setStartDate(start));
+    dispatch(setEndDate(end));
   };
 
   const DatePickerInput = forwardRef(({ value, onClick, placeholder }, ref) => (
