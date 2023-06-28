@@ -1,0 +1,24 @@
+.cardDetail {
+  margin-bottom: 70px;
+}
+
+.datePicker {
+  background-color: aquamarine;
+}
+
+.wrapperImage {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.buttonToPayment {
+  background: #5cb85f;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.buttonToPayment:hover {
+  background: #43a046;
+}
