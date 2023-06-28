@@ -1,12 +1,12 @@
-import Footer from "../../components/Footer"
-import Hero from "../../components/Hero"
-import HeaderNav from "../../components/Navbar"
+import Footer from "../../components/Footer";
+import Hero from "../../components/Hero";
+import HeaderNav from "../../components/Navbar";
 
-import CallToAction from "./components/CallToAction"
-import FAQ from "./components/FAQ"
-import OurServices from "./components/OurServices"
-import Testimonial from "./components/Testimonial"
-import WhyUs from "./components/WhyUs"
+import CallToAction from "./components/CallToAction";
+import FAQ from "./components/FAQ";
+import OurServices from "./components/OurServices";
+import Testimonial from "./components/Testimonial";
+import WhyUs from "./components/WhyUs";
 
 const Home = () => {
   return (
@@ -20,7 +20,7 @@ const Home = () => {
       <FAQ />
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

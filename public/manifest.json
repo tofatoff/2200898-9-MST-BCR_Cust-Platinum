@@ -1,0 +1,21 @@
+{
+  "short_name": "Binar Car Rental",
+  "name": "Rent Car in Binar Car Rental",
+  "icons": [
+    {
+      "src": "logo-binar192.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-binar192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo-binar512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
