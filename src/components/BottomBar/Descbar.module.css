@@ -1,0 +1,64 @@
+.main {
+  margin-top: -45px;
+  margin-bottom: 40px;
+  height: 100%;
+}
+
+.mainEmpty2 {
+  margin-top: -65px;
+  margin-bottom: 40px;
+}
+
+.sizeTag {
+  height: 35px;
+  width: 100%;
+}
+
+.btnSearch {
+  height: 37px;
+  width: 120%;
+  justify-content: center;
+  text-align: center;
+  padding: 8px 15px;
+  border-radius: 2px;
+  border: hidden;
+  display: unset;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  background: #5cb85f;
+  color: #fff;
+}
+
+.btnSearch:hover {
+  background: #409b43;
+  color: #ffffff;
+}
+
+.cardBar {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .main {
+    /* margin-top: 50px; */
+    margin-top: -30px;
+    margin-bottom: 80px;
+  }
+
+  .containerHeight {
+    height: 100%;
+  }
+  .btnSearch {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .label {
+    margin: 20px 0 5px 0;
+  }
+  .labelCar {
+    margin-bottom: 5px;
+  }
+}
