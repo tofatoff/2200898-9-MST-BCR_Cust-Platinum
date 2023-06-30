@@ -1,0 +1,121 @@
+.background2 {
+  background: #0d28b0;
+}
+
+.formControl {
+  width: 60%;
+  margin-top: 20%;
+  margin-left: 20%;
+  box-sizing: border-box;
+}
+
+.heading {
+  margin-top: 70px;
+  color: #ffffff;
+  margin-left: 60px;
+  opacity: 0.7;
+}
+
+.imagesLandingPage {
+  width: 90%;
+}
+
+.buttonSignUp {
+  background: #0d28b0;
+}
+
+.toLoginAdmin {
+  cursor: pointer;
+}
+
+.toLoginAdmin:hover {
+  color: #0d28a6;
+}
+
+.buttonSignUp:hover {
+  color: rgb(244, 243, 241);
+}
+
+.linkA {
+  color: #0d28b0;
+}
+
+@media (max-width: 992px) {
+  .background2 {
+    display: none;
+  }
+  .formControl {
+    width: 100%;
+    margin: 10% 50%;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 992px) {
+  .background2 {
+    display: none;
+  }
+  .formControl {
+    width: 100%;
+    margin: 10% 50%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 576px) {
+  .background2 {
+    display: none;
+  }
+  .formControl {
+    width: 100%;
+    margin: 10% 25%;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 450px) {
+  .background2 {
+    display: none;
+  }
+  .formControl {
+    width: 100%;
+    margin: 10% 8%;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 399px) {
+  .background2 {
+    display: none;
+  }
+  .formControl {
+    width: 100%;
+    margin: 10% 4%;
+  }
+}
+
+@media (min-width: 362px) and (max-width: 379px) {
+  .background2 {
+    display: none;
+  }
+  .formControl {
+    width: 100%;
+    margin: 10% 2%;
+  }
+}
+
+@media (min-width: 350px) and (max-width: 361px) {
+  .background2 {
+    display: none;
+  }
+  .formControl {
+    width: 100%;
+    margin: 10% auto;
+  }
+}
+
+@media (min-width: 250px) and (max-width: 349px) {
+  .background2 {
+    display: none;
+  }
+  .formControl {
+    width: 100%;
+    margin: 10% auto;
+  }
+}
