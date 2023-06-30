@@ -1,0 +1,66 @@
+.cardPayment {
+  margin-bottom: 70px;
+  margin-top: -40px;
+}
+
+.bankTransferPoint {
+  cursor: pointer;
+}
+
+.checklistBank {
+  margin-left: 390px;
+}
+
+.bankName {
+  margin-left: 30px;
+}
+
+.btnBayar {
+  height: 37px;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 8px 15px;
+  border-radius: 2px;
+  border: hidden;
+  display: unset;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  background: #5cb85f;
+  color: #fff;
+}
+
+.btnBayar:hover {
+  background: #409b43;
+  color: #ffffff;
+}
+
+.btnBayar:disabled {
+  background: #409b43;
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .checklistBank {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 912px) {
+  .checklistBank {
+    margin-left: 320px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+  .checklistBank {
+    margin-left: 180px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1282px) {
+  .checklistBank {
+    margin-left: 290px;
+  }
+}
