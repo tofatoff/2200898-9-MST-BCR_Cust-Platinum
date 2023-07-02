@@ -14,7 +14,7 @@ import {
 } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-// import { loginCustomer } from "../../redux/action-slice";
+import { loginCustomer } from "../../redux/action-slice";
 import { useDispatch } from "react-redux";
 
 const Login = () => {
@@ -24,6 +24,7 @@ const Login = () => {
   const [inputPassword, setInputPassword] = useState();
   const [isError, setIsError] = useState(false);
   const [showToast, setShowToast] = useState(false);
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -44,19 +45,24 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
+    setLoading(true)
     dispatch(loginCustomer({ email: inputEmail, password: inputPassword }))
       .unwrap()
       .then(() => {
         setTimeout(() => {
+          setLoading(false)
           setShowToast(true);
         }, 1000);
         setTimeout(() => {
+          setLoading(false)
           navigate("/");
         }, 3000);
+        
       })
       .catch((error) => {
         setTimeout(() => {
           setIsError(true);
+          setLoading(false)
         }, 1500);
       });
   };
@@ -147,12 +153,13 @@ const Login = () => {
                   variant="primary"
                   type="submit"
                   className={`w-100 mt-4 fw-bold ${classes.buttonSignUp}`}
+                  disabled={loading}
                 >
-                  Sign In
+                  {loading ? 'Loading...' : 'Sign In'}
                 </Button>
                 <div className="d-flex mt-3 justify-content-center">
                   <p className="text-dark fs-6 me-4">Don't have an account ?</p>
-                  <a className={`me-4 fw-bold ${classes.linkA}`} href="/signUp">
+                  <a className={`me-4 fw-bold ${classes.linkA}`} href="/register">
                     Sign Up for free
                   </a>
                 </div>

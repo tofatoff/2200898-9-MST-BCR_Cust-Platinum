@@ -1,5 +1,6 @@
 .top-eticket {
     background: rgb(241, 243, 255);
+    padding-top: 30px;
 }
 
 
@@ -43,3 +44,33 @@
 
 }
 
+.head-message {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.head-message img {
+    margin: 0 auto;
+    width: 68px;
+    height: 48px;
+}
+
+.head-notif {
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.head-note {
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8A8A8A;
+    padding-bottom: 30px;
+}
+
+.invoice-number {
+    padding-left: 239px;
+}

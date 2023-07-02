@@ -1,10 +1,8 @@
 import { Viewer, Worker } from "@react-pdf-viewer/core";
 import { getFilePlugin } from "@react-pdf-viewer/get-file";
-
 import "@react-pdf-viewer/core/lib/styles/index.css";
-import { Row } from "reactstrap";
 
-const WORKER_URL = "https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js";
+const WORKER_URL = "https://unpkg.com/pdfjs-dist@3.7.107/build/pdf.worker.min.js";
 
 const PdfViewer = () => {
 

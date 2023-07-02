@@ -13,14 +13,21 @@ import {
   Container,
 } from "reactstrap";
 import LogoBCR from "../LogoBCR";
+import { useSelector, useDispatch } from "react-redux";
+import authSlice from "../../redux/action-slice";
 
 const HeaderNav = (args) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const [isLogin, setIsLogin] = useState(false);
-
+  const dispatch   = useDispatch();
   const toggle = () => setIsOpen(!isOpen);
+  const selector = useSelector((state) => state.authStore);
+  const isLogin = selector.isAuthenticated
 
+  const handleLogout = async (e) => {
+    e.preventDefault();
+    dispatch(authSlice.actions.logout())
+  }
+  
   return (
     <div
       height={args.height}
@@ -65,9 +72,14 @@ const HeaderNav = (args) => {
                 <NavLink href="/#faq">FAQ</NavLink>
               </NavItem>
 
-              <NavLink href="/register">
-                <button className="btn btn-success">Register</button>
-              </NavLink>
+              {isLogin ? (                                
+                <button className='btn btn-danger' onClick={handleLogout}>Logout</button>                  
+              ) : (
+                <NavLink href="/register">
+                  <button className='btn btn-success'>Register</button>
+                </NavLink>
+              )}
+              
             </Nav>
           </Collapse>
           <Offcanvas isOpen={isOpen} toggle={toggle} direction="end">
