@@ -25,10 +25,6 @@ const Routes = () => {
     { path: "/login", element: <Login /> },
     { path: "/register", element: <Register /> },
     { path: "/", element: <Home /> },
-    // {
-    //   path: "/",
-    //   element: isAuthenticated ? <Home /> : <Navigate to="/login" />,
-    // },
     {
       path: "search",
       element: isAuthenticated ? <Search /> : <Navigate to="/login" />,
@@ -41,14 +37,6 @@ const Routes = () => {
       path: "/detail/:id",
       element: isAuthenticated ? <Detail /> : <Navigate to="/login" />,
     },
-    // {
-    //   path: "/login",
-    //   element: isAuthenticated ? <Login /> : <Navigate to="/login" />,
-    // },
-    // {
-    //   path: "/register",
-    //   element: isAuthenticated ? <Register /> : <Navigate to="/login" />,
-    // },
     {
       path: "/payment/:id",
       element: isAuthenticated ? <Payment /> : <Navigate to="/login" />,
