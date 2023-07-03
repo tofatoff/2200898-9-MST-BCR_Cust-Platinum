@@ -1,13 +1,15 @@
 import React from "react";
-import Navbar from "../../components/Navbar/index";
+import HeaderNav from "../../components/Navbar/index";
 import Footer from "../../components/Footer/index";
 import PaymentUpload from "../../components/PaymentUploadComp/PaymentUpload";
+import Bottom3 from "../../components/BottomBar/Bottom3";
 
 const Uploadpayment = () => {
   return (
     <div>
       <header>
-        <Navbar />
+        <HeaderNav />
+        <Bottom3 />
       </header>
       <main>
         <PaymentUpload />
