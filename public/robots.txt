@@ -1,3 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+Sitemap:binaracademy-fer9-gold-bcr.vercel.app/sitemap.xml
